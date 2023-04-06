@@ -4,6 +4,8 @@ Railway では Git で自分が取り組んだ内容を記録するときに、�
 テストが通れば Station クリアとなります。
 クリア後、TechTrain の画面に戻り、クリアになっているかを確認してみてください。
 
+[ユーザーマニュアル](https://docs.google.com/presentation/d/1BJSPCWBfy5xtwvBanoRGB77Y0N6JWMAHemEOLP49IPE/edit?usp=sharing)
+
 ## バージョン情報
 
 |言語、フレームワークなど|バージョン|
@@ -37,7 +39,7 @@ Node.js, Yarnのインストールがまだの場合は[html-staions](https://gi
 作成したリポジトリを作業するディレクトリにクローンしましょう。
 
 * Macなら Terminal.app(iTerm2などでも良い)
-* Windowsなら PowerShell(GitBashなどのインストールしたアプリでもう良いです。アプリによってはコマンドが異なることがあります)
+* Windowsなら PowerShell(GitBashなどのインストールしたアプリでも良いです。アプリによってはコマンドが異なることがあります)
 
 で作業するディレクトリを開き、次のコマンドでForkしたGo Railwayのリポジトリをローカルにクローンしてください。
 
@@ -76,7 +78,7 @@ GitHubでサインアップしており、パスワードがない方がいま�
 
 ログインが完了すれば、ひとまず事前準備はおしまいです。お疲れ様でした。
 TechTrainの画面からチャレンジを始めることもお忘れなく！
-Rails Railway に取り組み始めてください。
+Go Railway に取り組み始めてください。
 
 ## DB(SQLite)と接続をしたいという方へ
 
@@ -89,8 +91,12 @@ Rails Railway に取り組み始めてください。
 
 ## トラブルシューティング
 
-### DBに接続して中身が見れないのですが？
+### go testで404というエラーが返ってきます。
 
+main.goなどでhandlerの登録を確認してみましょう。
+テストの関係上router.NewRouterのメソッド内部で追加するようにしましょう。
+
+### DBに接続して中身が見れないのですが？
 
 次のような結果が返ってきていれば、正常です。
 
@@ -134,7 +140,7 @@ Stationの問題やエラーの修正などがなされておらず、自分で�
 ### 準備
 
 ```shell
-# こちらは、自分でクローンした[GitHubユーザー名]/rails-stationsの作業ディレクトリを前提としてコマンドを用意しています。
+# こちらは、自分でクローンした[GitHubユーザー名]/go-stationsの作業ディレクトリを前提としてコマンドを用意しています。
 # 自分が何か変更した内容があれば、 stash した後に実行してください。
 git remote add upstream git@github.com:TechBowl-japan/go-stations.git
 git fetch upstream
